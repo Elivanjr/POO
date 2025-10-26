@@ -5,7 +5,7 @@ public class Aluno{
 	private String situacao;
 	
 	public Aluno(String nome, int matricula, Double media){
-	  this.nome = nome;
+    this.nome = nome;
     this.matricula = matricula;
     this.media = media;
     verificaSituacao();
