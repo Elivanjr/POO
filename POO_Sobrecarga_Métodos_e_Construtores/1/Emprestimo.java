@@ -3,10 +3,12 @@ public class Emprestimo {
 	private Double renda;
 	
 	public Emprestimo(){
-		
+	  this.nomeCliente = "Não definido";
+    this.renda = 0.0;
 	}
 	
 	public Emprestimo(String nomeCliente, Double renda){
+    this.nomeCliente = nomeCliente;
 		this.renda = renda;
 	}
 	
