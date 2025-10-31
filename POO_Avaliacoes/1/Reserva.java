@@ -1,7 +1,7 @@
 public class Reserva{
 	//Atributos
 	private int codigo;
-  private int diarias;
+  	private int diarias;
 	private String nomeHospede;
 	private boolean incluiRefeicoes;
 	
