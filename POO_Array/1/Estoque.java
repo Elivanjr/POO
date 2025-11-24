@@ -53,7 +53,7 @@ public class Estoque{
 			System.out.println(
 				"Código: " + alvo.getCodigo() +
 				" - Descrição: " + alvo.getDescricao() +
-				" - Preço: " + alvo.getPreco() +
+				" - Preço: R$" + alvo.getPreco() +
 				" - Quantidade: " + alvo.getQuantidade()
 			);
 		}
