@@ -45,5 +45,19 @@ public class Estoque{
     }
     return null;
   }
+  
+  public void listarProduto(){
+	System.out.println("- - - - - ESTOQUE - - - - -");
+	for(Produto alvo : produtos){
+		if(alvo != null){
+			System.out.println(
+				"Código: " + alvo.getCodigo() +
+				" - Descrição: " + alvo.getDescricao() +
+				" - Preço: " + alvo.getPreco() +
+				" - Quantidade: " + alvo.getQuantidade()
+			);
+		}
+	}
+  }
 
 }

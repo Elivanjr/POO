@@ -6,7 +6,7 @@ public class Produto{
 
   public Produto(int codigo, String descricao, Float preco, int quantidade){
     this.codigo = codigo;
-    this.descricao = this.descricao;
+    this.descricao = descricao;
     this.preco = preco;
     this.quantidade = quantidade;
   }
@@ -23,7 +23,7 @@ public class Produto{
     return descricao;
   }
   
-  public void getDescricao(String descricao){
+  public void setDescricao(String descricao){
     this.descricao = descricao;
   }
 
