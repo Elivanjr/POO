@@ -1,0 +1,45 @@
+public class Produto{
+  private int codigo;
+  private String descricao;
+  private Float preco;
+  private int quantidade;
+
+  public Produto(int codigo, String descricao, Float preco, int quantidade){
+    this.codigo = codigo;
+    this.descricao = this.descricao;
+    this.preco = preco;
+    this.quantidade = quantidade;
+  }
+
+  public int getCodigo(){
+    return codigo;
+  }
+  
+  public void setCodigo(int codigo){
+    this.codigo = codigo;
+  }
+
+  public String getDescricao(){
+    return descricao;
+  }
+  
+  public void getDescricao(String descricao){
+    this.descricao = descricao;
+  }
+
+  public Float getPreco(){
+    return preco;
+  }
+  
+  public void setPreco(Float preco){
+    this.preco = preco;
+  }
+
+  public int getQuantidade(){
+    return quantidade;
+  }
+  
+  public void setQuantidade(int quantidade){
+    this.quantidade = quantidade;
+  }
+}

@@ -20,6 +20,11 @@ public class Hotel{
 		System.out.println("Digite a opção desejada: ");
 
 	}
+	
+	public static void limpaTela(){
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
+	}
 
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
@@ -44,7 +49,7 @@ public class Hotel{
 							System.out.println("Taxa de Limpeza? (1 - Sim // 2 - Não ");
 							temTaxa = sc.nextInt();
 							if(temTaxa == 1){
-								System.out.println("Digite a taxa ");
+								System.out.println("Digite a taxa: ");
 								taxa = sc.nextDouble();
 								System.out.println("Diaria: " + re1.calcularDiaria(taxa));
 							}else if (temTaxa == 2){
@@ -55,7 +60,7 @@ public class Hotel{
 							System.out.println("Taxa de Limpeza? (1 - Sim // 2 - Não ");
 							temTaxa = sc.nextInt();
 							if(temTaxa == 1){
-								System.out.println("Digite a taxa ");
+								System.out.println("Digite a taxa: ");
 								taxa = sc.nextDouble();
 								System.out.println("Diaria: " + re2.calcularDiaria(taxa));
 							}else if (temTaxa == 2){
@@ -63,6 +68,7 @@ public class Hotel{
 							}
 						}
 					}
+				
 				break;
 				
 				case 2: {

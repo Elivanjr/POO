@@ -2,20 +2,22 @@ public class Pessoa {
 	//Atributos
 	private String nome;
 	private String cpf;
+	private String telefone;
 	private String endereco;
 	private Double renda;
 	
 	//Construtor
-	public Pessoa(String nome, String cpf, String endereco, Double renda){
+	public Pessoa(String nome, String cpf, String telefone, String endereco, Double renda){
 		this.nome = nome;
 		this.cpf = cpf;
+		this.telefone = telefone;
 		this.endereco = endereco;
 		this.renda = renda;
 	}
 	
 	//Métodos
 	public String informacoes(){
-		String aux = "Nome: " + this.nome + "CPF: " + this.cpf + "Endereço: " + this.endereco + "Renda: " + this.renda;
+		String aux = "Nome: " + this.nome + " - CPF: " + this.cpf + " - Telefone: " + this.telefone +" - Endereço: " + this.endereco + " - Renda: " + this.renda;
 		return aux;
 	}
 	
