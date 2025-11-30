@@ -3,6 +3,10 @@ public class Empregado extends Pessoa{
   private Setor setor;
   private float salarioBase;
   private float imposto;
+  
+  public float calculaSalario(){
+	return this.salarioBase - this.imposto;
+  }
 
   //getters & setters
   public Setor getSetor() {
