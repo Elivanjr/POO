@@ -27,9 +27,9 @@ public class Empresa {
 			if(this.empregados[i] != null){
 			//Setor aux = this.empregados[i].getSetor();
 			//if(aux != null){
-			if(this.empregados[i].getSetor() != null){ //os pensamentos intrusivos venceram...
+			if(this.empregados[i].getSetor() != null && this.empregados[i] != null){ //os pensamentos intrusivos venceram...
 				System.out.println(
-					"Nome do Empregado: " + this.empregados[i].getNome() +
+					"Nome do(a) Empregado(a): " + this.empregados[i].getNome() +
 					"\nNome do Setor: " + this.empregados[i].getSetor().getNome() +
 					"\nCódigo do Setor: " + this.empregados[i].getSetor().getCodigoDoSetor() + "\n"
 					);
@@ -39,9 +39,34 @@ public class Empresa {
 	}
 
 	public void listaFornecedores(){
-		System.out.println();
+		//coloque um bool (existeCadastro) que sempre seja false, e dentro do loop é true
+		System.out.println("- - - - - Lista dos Fornecedores - - - - -");
+		for(int i = 0; i < this.fornecedores.length; i++){
+			if(this.fornecedores[i] != null){
+				System.out.printf("\nNome do(a) Fornecedor(a): %s\nSaldo: %.2f\n", this.fornecedores[i].getNome(), this.fornecedores[i].obterSaldo());
+			}
+		}
 	}
-// listaFornecedores(): exibe a lista com o nome e o saldo dos fornecedores.
+	
+	public void folhaDePagamento(){
+		System.out.printf("\n= = = = = Folha de Pagamento = = = = =\n");
+		float somaFolha = 0, salario = 0;
+		boolean existeCadastro = false; //dps implemento
+		for(int i = 0; i < this.empregados.length; i++){
+			if(this.empregados[i] != null){
+				salario = this.empregados[i].calculaSalario();
+				System.out.printf("\nEmpregado: %s\nSaldo: %.2f\n", this.empregados[i].getNome(), salario);	
+				somaFolha += salario;
+				existeCadastro = true;
+			}
+		}
+		if(existeCadastro){
+			System.out.printf("Valor total da folha de pagemento da empresa: %.2f\n", somaFolha);
+		}else{
+			System.err.println("CAIA FORA...");
+		}
+	}
+
 	public Setor[] getSetores() { 
 		return setores; 
 	}
