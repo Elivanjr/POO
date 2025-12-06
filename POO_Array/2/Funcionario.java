@@ -5,9 +5,9 @@ public class Funcionario{
 	private Double salario;
 	private String funcao;
 	
-	public Funcionario(String nome, int matricula, int departamento, Double salario, String funcao){
-		this.nome =  nome;
+	public Funcionario(int matricula, String nome, int departamento, Double salario, String funcao){
 		this.matricula = matricula;
+		this.nome =  nome;
 		this.departamento = departamento;
 		this.salario = salario;
 		this.funcao = funcao;

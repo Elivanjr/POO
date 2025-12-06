@@ -43,8 +43,43 @@ public class SetorPessoal{
 		return null;
 	}
 	
+	public Funcionario[] listarFuncionario(){
+		return this.funcionarios;
+	}
+
 	public Funcionario[] listarFuncionario(int departamento){
-		Q
+		Funcionario[] aux = new Funcionario[this.funcionarios.length];
+		int cont = 0;
+		
+		for(int i = 0; i < this.funcionarios.length; i++){
+			if(this.funcionarios[i] != null && this.funcionarios[i].getDepartamento() == departamento){
+				aux[cont++] = this.funcionarios[i];
+			}
+		}
+		
+		Funcionario[] funcionario = new Funcionario[cont];
+		for(int i = 0; i < cont; i++){
+			funcionario[i] = aux[i];
+		}
+		return funcionario;
 	}
 	
+	public Funcionario[] listarFuncionario(String funcao){
+		Funcionario[] aux = new Funcionario[this.funcionarios.length];
+		int cont = 0;
+		
+		for(int i = 0; i < this.funcionarios.length; i++){
+			if(this.funcionarios[i] != null && this.funcionarios[i].getFuncao().equalsIgnoreCase(funcao)){
+				aux[cont++] = this.funcionarios[i];
+			}
+		}
+		
+		Funcionario[] funcionario = new Funcionario[cont];
+		for(int i = 0; i < cont; i++){
+			funcionario[i] = aux[i];
+		}
+		
+		return funcionario;
+	}
+
 }
