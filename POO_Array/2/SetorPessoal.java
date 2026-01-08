@@ -6,9 +6,9 @@ public class SetorPessoal{
 	}
 	
 	public boolean adicionarFuncionario(Funcionario funcionario){
-		for(int i = 0; i < funcionarios.length; i++){
-			if(funcionarios[i] == null){
-				funcionarios[i] = funcionario;
+		for(int i = 0; i < this.funcionarios.length; i++){
+			if(this.funcionarios[i] == null){
+				this.funcionarios[i] = funcionario;
 				return true;
 			}
 		}
